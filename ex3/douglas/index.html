@@ -20,6 +20,7 @@
             width: 100%;
             height: 100%;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
         body {
@@ -42,9 +43,21 @@
 
         .hero--section--title {
             color: white;
-            font-size: 45px;
-            letter-spacing: 8px;
+            font-size: 50px;
+            letter-spacing: 12px;
             font-weight: 800;
+        }
+
+        .hero--section--message {
+            max-width: 380px;
+            color: rgb(212, 212, 212);
+            text-align: justify;
+        }
+
+        .hero--section--message footer {
+            margin-top: 4px;
+            text-align: end;
+            color: white;
         }
 
         .content--section {
@@ -53,14 +66,22 @@
             background-color: rgb(255, 255, 255);
         }
 
+        p {
+            
+        }
+
     </style>
 </head>
 <body>
     <div class="hero--section animation--class">
         <h1 class="hero--section--title">BLACK HOLE</h1>
-        <p class="hero--section--message"></p>
+        <blockquote class="hero--section--message">
+            "Se você pular em um buraco negro, você será rasgado em pedaços antes mesmo de chegar ao buraco negro propriamente dito."
+            <footer>~Carvalho, Douglas </footer>
+        </blockquote>
+        <a href="#content" class="hero--section--explore--button">Explorar</a>
     </div>
-    <div class="content--section">
+    <div class="content--section" id="content">
 
     </div>
 </body>
