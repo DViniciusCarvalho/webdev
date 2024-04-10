@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" >
 
     <title>Black Hole</title>
     <style>
@@ -43,29 +43,134 @@
 
         .hero--section--title {
             color: white;
-            font-size: 50px;
+            font-size: 2.5rem;
             letter-spacing: 12px;
             font-weight: 800;
+            text-align: center;
         }
 
         .hero--section--message {
             max-width: 380px;
+            width: 90%;
             color: rgb(212, 212, 212);
-            text-align: justify;
+            text-align: center;
         }
 
         .hero--section--message footer {
             margin-top: 4px;
-            text-align: end;
+            text-align: center;
             color: white;
         }
 
-        .content--section {
-            height: 2000px;
-            width: 100%;
-            background-color: rgb(255, 255, 255);
+        .hero--section--explore--button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-decoration: none;
+            color: white;
+            font-size: 1.3em;
+            padding: 20px;
+            margin-top: 70px;
+            transition: border-color 0.3s;
         }
 
+        .hero--section--explore--button:hover {
+            border-color: white;
+        }
+
+        .arrow-down {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid rgb(255, 255, 255);
+            animation: arrowDown 1s ease-in-out 0s infinite;
+        }
+
+        @keyframes arrowDown {
+            0% {
+                bottom: 0%;
+            }
+
+            50% {
+                bottom: 25%;
+            }
+
+            100% {
+                bottom: 0%;
+            }
+        }
+
+        .content--section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            height: 2900px;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            padding: 40px 0px;
+        }
+
+        .content--section * {
+            max-width: 600px;
+            width: 90%;  
+        }
+
+        .content--section p {
+            text-align: justify;
+        }
+
+        .content--section h2 {
+            text-align: start;
+            color: rgb(28, 29, 31);
+            margin-top: 15px;
+        }
+
+        .content--section ul {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .content--section ul li {
+            width: 100%;
+            list-style-position: inside;
+            list-style-type: none;
+            text-align: justify;
+        }
+
+        .content--section ul li::before {
+            content: '→';
+        }
+
+        .content--section ul li span {
+            font-weight: bold;
+        }
+
+        .content--section figure {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .content--section figure * {
+            width: 100%;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 600px) and (min-width: 440px){
+            .content--section {
+                height: 3500px;
+            }
+        }
+
+        @media screen and (max-width: 441px){
+            .content--section {
+                height: 4200px;
+            }
+        }
 
     </style>
 </head>
@@ -76,10 +181,90 @@
             "Se você pular em um buraco negro, você será rasgado em pedaços antes mesmo de chegar ao buraco negro propriamente dito."
             <footer>~Carvalho, Douglas </footer>
         </blockquote>
-        <a href="#content" class="hero--section--explore--button">Explorar</a>
+        
+        <a href="#content" class="hero--section--explore--button">
+            <div class="arrow-down"></div>
+        </a>
     </div>
     <div class="content--section" id="content">
-
+        <h2>O que é?</h2>
+        <p>
+            Buraco negro é um objeto astronômico que apresenta densidade infinita e um campo gravitacional bastante intenso, capaz de atrair todos os elementos que cruzam o seu horizonte de eventos, conhecido como ponto de não retorno. Quando ultrapassa esse limiar, até mesmo a luz é absorvida pelo buraco negro. Sua origem ocorre principalmente por meio do colapso gravitacional de estrelas.
+        </p>
+        <p>
+            Os buracos negros são formados pela singularidade, um único ponto que contém toda a sua massa, pelo horizonte de eventos e pelo disco de acreção, que nos permite identificá-los. Sabe-se hoje que eles são também capazes de emitir radiação, o que foi proposto pelo físico Stephen Hawking na década de 1970. Nos últimos anos, o mundo teve acesso pela primeira vez à imagem de um buraco negro, divulgada em 2019, um importante marco para a ciência.
+        </p>
+        <p>
+            Uma vez em seu interior, é quase impossível que os materiais retornem ao espaço. No entanto, já se sabe atualmente que esses objetos conseguem emitir radiação térmica derivada dos efeitos quânticos desencadeados no seu interior. Essa radiação é conhecida como radiação Hawking, uma vez que a sua existência foi teorizada pelo físico teórico Stephen Hawking (1942-2018) em 1974.
+        </p>
+        <p>
+            É importante lembrar que a velocidade que os objetos devem atingir para não serem atraídos pela gravidade de outros é denominada velocidade de escape. Nos buracos negros, essa velocidade é superior à da luz, e por isso ela também é sugada por esses objetos.
+        </p>
+        <h2>Origem</h2>
+        <p>
+            Todas as estrelas são essencialmente formadas por poeira e gases, com reações termonucleares que acontecem na sua camada mais interna, o núcleo. A compactação desses astros acontece quando os elementos responsáveis pela fusão nuclear (combustíveis) se esgotam, o que desencadeia uma explosão denominada supernova. Nas estrelas massivas, a atração gravitacional é tão intensa que elas se compactam até chegarem ao estágio dos buracos negros.
+        </p>
+        <h2>Partes</h2>
+        <p>
+            A estrutura de um buraco negro é composta por três elementos principais: a singularidade, o horizonte de eventos e os discos de acreção:
+        </p>
+        <ul>
+            <li>
+                <span>Singularidade:</span> corresponde à principal parte de um buraco negro, localizada no seu centro. Trata-se de um único ponto que abriga uma enorme massa derivada do colapso gravitacional da estrela que originou o buraco negro e também daqueles corpos por ele atraídos. Essas características fazem com que a singularidade apresente uma densidade extremamente alta, descrita como infinita.
+            </li>
+            <li>
+                <span>Horizonte de eventos:</span> conhecido como o ponto de não retorno de um buraco negro, consiste em uma região que circunda o seu núcleo. Corresponde ao limite a partir do qual toda matéria e energia é atraída para o interior dos buracos negros. Para que isso não aconteça, os objetos precisam estar a uma determinada distância do horizonte de eventos, movendo-se a uma velocidade igual ou superior à velocidade de escape.
+            </li>
+            <li>
+                <span>Discos de acreção:</span> são formados por poeira e gases superaquecidos que emitem radiação eletromagnética e se movem a uma velocidade acelerada no entorno dos buracos negros. A parte dessa estrutura situada fora do horizonte de eventos é visível, o que torna possível a identificação dos buracos negros.
+            </li>
+        </ul>
+        <figure>
+            <img src="images/black-hole-parts.jpg" alt="black hole parts">
+            <figcaption>
+                Fonte: 
+                <a href="https://aprovatotal.com.br/buracos-negros/">
+                    https://aprovatotal.com.br/buracos-negros/
+                </a>
+                abcd
+            </figcaption>
+        </figure>
+        <h2>Tipos</h2>
+        <p>Os buracos negros são classificados, de acordo com a sua massa, em:</p>
+        <ul>
+            <li>
+                <span>Buracos negros estelares:</span> são aqueles derivados do colapso gravitacional das estrelas que possuem pelo menos o triplo da massa do Sol. São os mais comuns no nosso Universo.
+            </li>
+            <li>
+                <span>Buracos negros supermassivos:</span> são centenas de milhares e até bilhões de vezes mais massivos que o Sol, e estão localizados mais comumente no centro das galáxias. Um exemplo é o Sagitário A*, que fica no centro da Via Láctea. Sua formação ainda é incerta, e acredita-se que pode ter se originado do colapso de aglomerados estelares, gases ou também da fusão de buracos negros menores.
+            </li>
+            <li>
+                <span>Buracos negros intermediários:</span> são aqueles com massa intermediária, entre os estelares e supermassivos.
+            </li>
+        </ul>
+        <h2>Teorias</h2>
+        <p>
+            A principal e mais famosa teoria a respeito dos buracos negros foi elaborada pelo físico alemão Albert Einstein (1879-1955) no ano de 1915, e ficou conhecida como teoria da relatividade geral. Ela foi proposta uma década depois da teoria da relatividade ou teoria da relatividade restrita, que ponderava sobre o tempo e a velocidade relativa dos objetos, determinando ainda que a velocidade da luz é a mesma para todos os corpos presentes no Universo.
+        </p>
+        <p>
+            A relatividade geral ampliou essa percepção levando em consideração a aceleração e as deformações que ela pode causar no espaço-tempo. Assim, é atribuída a Einstein a explicação do comportamento dos buracos negros, validando assim a possibilidade de existência desses objetos no nosso Universo. Apesar disso, o termo “buraco negro” foi cunhado muitas décadas mais tarde, no ano de 1962, pelo físico estadunidense John Wheeler (1911-2008).
+        </p>
+        <p>
+            A teoria de Einstein foi importante no entendimento de como um buraco negro se forma, isto é, por meio do colapso gravitacional das estrelas massivas. Na década de 1970, novas proposições a respeito do funcionamento desses objetos foram elaboradas pelo físico inglês Stephen Hawking. Hawking foi responsável pela descrição dos fenômenos físicos que regem os buracos negros.
+        </p>
+        <p>
+            Outras importantes contribuições de Hawkings foram com relação à emissão de radiação pelos buracos negros, deixando de lado a ideia de que nada escapa da sua gravidade, e também a noção de que, justamente em decorrência da radiação que eles emitem, os buracos negros eventualmente “morrem”, isto é, desaparecem.
+        </p>
+        <h2>Referências</h2>
+        <p>
+            Conteúdo: 
+            <a href="https://brasilescola.uol.com.br/geografia/buraco-negro.htm">
+                https://brasilescola.uol.com.br/geografia/buraco-negro.htm
+            </a>
+        </p>
+        <p>
+            Background: Getty Images
+        </p>
     </div>
 </body>
 </html>
